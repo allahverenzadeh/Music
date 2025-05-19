@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByAlik Product.</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo::before {
+            content: '\1F3B5'; 
+            font-size: 28px;
+            color: #FFD700;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #FFD700;
+        }
+
+        header .search-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .search-container input {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        header .search-container button {
+            background-color: hsl(30, 1%, 29%);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        header .search-container button:hover {
+            background-color: #00ff81;
+        }
+
+      
+        .main-content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 200px;
+            margin: 100px auto;
+            width: 80%;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .left-div, .right-div {
+            width: 45%;
+            height: 400px;
+            background-color: #444;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left-div img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: relative;
+            top: -20px;
+            background-color: #32CD32;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .play-button:hover {
+            background-color: #228B22;
+        }
+
+        .song-name {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        
+        .right-div {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #32CD32 #333;
+        }
+
+        .right-div:hover {
+            scrollbar-color: #228B22 #333;
+        }
+
+        .right-div::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .right-div::-webkit-scrollbar-thumb {
+            background-color: #32CD32;
+            border-radius: 10px;
+        }
+
+        .right-div::-webkit-scrollbar-thumb:hover {
+            background-color: #228B22;
+        }
+
+        .lyrics {
+            line-height: 1.8;
+        }
+
+       
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .left-div, .right-div {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">ByAlik Music</div>
+        <nav>
+            <a href="#">Music</a>
+            <a href="#">Alik</a>
+            <a href="#">Product</a>
+        </nav>
+        <div class="search-container">
+            <input type="text" placeholder="Axtarış...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    
+    <div class="main-content-container">
+        
+        <div class="main-content">
+            <div class="left-div">
+                <img src="snowmanphotoss.jpeg" alt="Music">
+                <button class="play-button" id="playButton1">▶</button>
+                <div class="song-name">Sia - Snowman</div>
+                
+                <audio id="audioPlayer1" src="Snowman.mp3"></audio>
+            </div>
+            <div class="right-div">
+                <div class="lyrics">
+                    Don't cry, snowman, not in front of me<br>
+Who'll catch your tears if you can't catch me, darling?<br>
+If you can't catch me, darling<br>
+Don't cry, snowman, don't leave me this way<br>
+A puddle of water can't hold me close, baby<br>
+Can't hold me close, baby<br>
+I want you to know that I'm never leaving<br>
+'Cause I'm Mrs. Snow, 'til death we'll be freezing<br>
+Yeah, you are my home, my home for all seasons<br>
+So come on, let's go<br>
+Let's go below zero and hide from the sun<br>
+I love you forever where we'll have some fun<br>
+Yes, let's hit the North Pole and live happily<br>
+Please, don't cry no tears now, it's Christmas, baby<br>
+My snowman and me<br>
+My snowman and me<br>
+Baby<br><br><br>
+
+Don't cry, snowman, don't you fear the sun<br>
+Who'll carry me without legs to run, honey?<br>
+Without legs to run, honey<br>
+Don't cry, snowman, don't you shed a tear<br>
+Who'll hear my secrets if you don't have ears, baby?<br>
+If you don't have ears, baby<br>
+I want you to know that I'm never leaving<br>
+'Cause I'm Mrs. Snow, 'til death we'll be freezing<br>
+Yeah, you are my home, my home for all seasons<br>
+So come on, let's go<br>
+Let's go below zero and hide from the sun<br>
+I love you forever where we'll have some fun<br>
+Yes, let's hit the North Pole and live happily<br>
+Please, don't cry no tears now, it's Christmas, baby<br>
+My snowman and me<br>
+My snowman and me<br>
+Baby
+
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="main-content">
+            <div class="left-div">
+                <img src="ghost.webp" alt="Music">
+                <button class="play-button" id="playButton2">▶</button>
+                <div class="song-name">Ghost - Mary On A Cross</div>
+                
+                <audio id="audioPlayer2" src="Ghost - Mary On A Cross.mp3"></audio>
+            </div>
+            <div class="right-div">
+                <div class="lyrics">
+                    We were speeding together<br>
+Down the dark avenues<br>
+But besides of the stardom<br>
+All we got was blues<br><br>
+
+But through all of that sorrow<br>
+We were riding high<br>
+And the truth of the matter is<br>
+I never let you go, let you go<br><br>
+
+We were scanning the cities<br>
+Rocking to pay the dues<br>
+But besides of the glamour<br>
+All we got was bruised<br><br>
+
+But through all of that sorrow<br>
+We were riding high<br>
+And the truth of the matter is<br>
+I never let you go, let you go<br><br>
+
+You go down just like Holy Mary<br>
+Mary on a, Mary on a cross<br>
+Not just another Bloody Mary<br>
+Mary on a, Mary on a cross<br><br>
+
+If you choose to run away with me<br>
+I will tickle you internally<br>
+And I see nothing wrong with that<br><br>
+
+We were searching for reasons<br>
+To play by the rules<br>
+But we quickly found<br>
+It was just for fools<br><br>
+
+Now through all of this sorrow<br>
+We'll be riding high<br>
+And the truth of the matter is<br>
+I never let you go, let you go<br><br>
+
+You go down just like Holy Mary<br>
+Mary on a, Mary on a cross<br>
+Not just another Bloody Mary<br>
+Mary on a, Mary on a<br><br>
+
+You go down just like Holy Mary<br>
+Mary on a, Mary on a cross<br>
+Your beauty never ever scared me<br>
+Mary on a, Mary on a cross<br><br>
+
+If you choose to run away with me<br>
+I will tickle you internally<br>
+And I see nothing wrong with that<br><br>
+
+Nothing wrong with that<br>
+(Mary on a, Mary on a cross)<br>
+Nothing wrong with that<br>
+(Mary on a, Mary on a cross)<br>
+(Mary on a) Mary on a cross
+
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="main-content">
+            <div class="left-div">
+                <img src="qara.jpg" alt="Music">
+                <button class="play-button" id="playButton3">▶</button>
+                <div class="song-name">Nur Ceferli x Ruzigar Qedirov - Qara Gozlum</div>
+                
+                <audio id="audioPlayer3" src="Nur Ceferli x Ruzigar Qedirov - Qara Gozlum (YUKLE).mp3"></audio>
+            </div>
+            <div class="right-div">
+                <div class="lyrics">
+                    Mənə həsrətli baxışlarla gəlib qəmli danışma<br>
+                    Danışma<br>
+                    Yenə qısqanma, alışma, ‘’O, kim, bu, kimdir?’’ soruşma<br>
+                    Soruşma<br><br>
+                    
+                    Səndən ayrı qalmaq elə pisdir, pisdən betər<br>
+                    Bitər bu hicran, bitər, gedər gözümdən kədər<br>
+                    Sənə hissim ayrı hissdir, bu könlüm səni istər<br>
+                    Yetər bir baxışın, bir dəfə baxsan, qara gözlüm<br><br>
+                    
+                    Qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm<br><br>
+                    
+                    Həmin o gözlərimin ağlarına yağdı yağışlar<br>
+                    Yağışlar<br>
+                    Həmin o gözlərinin yaşlarına görə bağışla<br>
+                    Bağışla<br><br>
+                    
+                    Xəyal et ki, bu aləm səninlə ayrı aləm<br>
+                    Yox orada nə bir dərd-qəm, nə ağrı, nə məlhəm<br>
+                    Xəyal et ki, sevgilim, duyğular dilim-dilim<br>
+                    Yetər bir baxışın, tək səni sevdim, qara gözlüm<br><br>
+                    
+                    Qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm<br>
+                    Qara, qara, qara, qara, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm, qara gözlüm<br><br>
+                    
+                    Qara, qara, qara, qara, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm, qara gözlüm, qara gözlüm<br>
+                    Qara gözlüm, qara gözlüm, qara gözlüm<br>
+                    (Qara, qara, qara, qara)<br>
+                                    </div>
+            </div>
+        </div>
+
+        
+        <div class="main-content">
+            <div class="left-div">
+                <img src="benikurtar.jpg" alt="Music">
+                <button class="play-button" id="playButton4">▶</button>
+                <div class="song-name">Perdenin Ardindakiler-Beni Kendinden Kurtar</div>
+                
+                <audio id="audioPlayer4" src="Perdenin-Ardindakiler-Beni Kendinden Kurtar.mp3"></audio>
+            </div>
+            <div class="right-div">
+                <div class="lyrics">
+                    Senin ellerindeyim<br>
+                    Düşlerindeyim, gülüşlerindeyim<br>
+                    Kaybolan soluk gidişlerin<br>
+                    Canım sevgilim artık ölmeyelim<br><br>
+                    
+                    Boşluğun dibinde yalnızım<br>
+                    Biraz kararsızım<br>
+                    Kendinden utanır mısın?<br>
+                    Sonum belki en başımdır<br>
+                    Yollar karışmıştır<br>
+                    Ben olmadan kaçamaz mısın?<br><br>
+                    
+                    Düşerdim yamaçlarından<br>
+                    Sapsarı saçlarından, avuçlarından<br>
+                    Yine de kalkar severdim, gülüşün özeldi<br>
+                    Beni kendinden kurtar<br><br>
+                    
+                    Düşerdim yamaçlarından<br>
+                    Sapsarı saçlarından, avuçlarından<br>
+                    Yine de kalkar severdim, gülüşün özeldi<br>
+                    Beni kendinden kurtar<br><br>
+                    
+                    Aynalar korkumu yansıtır<br>
+                    Titriyor dizlerim, gerçeğim sanrıdır<br>
+                    Gözlerin gizliyor zihnini<br>
+                    O son sözlerini, kararmış kalbini<br><br>
+                    
+                    Yüzleşmem gereken doğrular<br>
+                    Savaşım kendim ve bir kaç satırla<br>
+                    Suçluyum bahar gözlerine<br>
+                    Yağmur yağmışsa, artık huzursuzsan<br><br>
+                    
+                    Düşerdim yamaçlarından<br>
+                    Sapsarı saçlarından, avuçlarından<br>
+                    Yine de kalkar severdim, gülüşün özeldi<br>
+                    Beni kendinden kurtar<br><br>
+                    
+                    Düşerdim yamaçlarından<br>
+                    Sapsarı saçlarından, avuçlarından<br>
+                    Yine de kalkar severdim, gülüşün özeldi<br>
+                    Beni kendinden kurtar<br>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        function togglePlay(audioId, buttonId) {
+            const playButton = document.getElementById(buttonId);
+            const audioPlayer = document.getElementById(audioId);
+
+            playButton.addEventListener('click', function() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play(); 
+                    playButton.textContent = '❚❚'; 
+                } else {
+                    audioPlayer.pause(); // Müzik durur
+                    playButton.textContent = '▶'; 
+                }
+            });
+        }
+
+        
+        togglePlay('audioPlayer1', 'playButton1');
+        togglePlay('audioPlayer2', 'playButton2');
+        togglePlay('audioPlayer3', 'playButton3');
+        togglePlay('audioPlayer4', 'playButton4');
+
+    
+    </script>
+</body>
+</html>
